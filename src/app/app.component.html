@@ -1,7 +1,12 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  {{ currentData | date: 'dd/MM/yyyy hh:mm:ss' }}
 </p>
 
-<input name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
-<img [src]="resizedBase64"/>
+<input
+  name="imageUrl"
+  type="file"
+  accept="image/*"
+  (change)="handleInputChange($event)"
+/>
+<img [src]="resizedBase64" />
